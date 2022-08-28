@@ -1,9 +1,6 @@
 # Statistics
 ### In what situation would you consider mean over median?   
-The median splits the data roughly into two halves. Advantages of median:  
-- Robust to outliers, e.g. median of (121, 124, 132, 142, 171) with outlier and (142, 124, 121, 151, 132) without outlier is the same, whilst mean is not 
-- Robust to skewed distributions, general approach is to calculate both, if the mean is vastly different it could indicate highly skewed or noisy data  
-However, the mean can be used if the data distribution is symmetric and continuous
+The median splits the data roughly into two halves. Advantages of median:\n- Robust to outliers, e.g. median of (121, 124, 132, 142, 171)with outlier and (142, 124, 121, 151, 132) without outlier is the same, whilst mean is not\n- Robust to skewed distributions, general approach is to calculate both, if the mean is vastly different it could indicate highly skewed or noisy data However, the mean can be used if the data distribution is symmetric and continuous
 ### How do you ineterpret the standard error of the median and mean? 
 The standard error of the mean how far the sample mean is likely to be from the true population mean, whilst the standard error of the median is the same for median. It indicates roughly by how much the sample statistics will vary from the actual population statistics, and will generally approach the population statistics as the number of samples increase.
 
@@ -12,19 +9,18 @@ The standard error of the mean how far the sample mean is likely to be from the 
 Result thata data values modeled as being rando from any continuous distribution can be converted to standard uniform, provided that distribution being used is the true distribution of the random variables. One use for the probability integral transform in statistical data analysis is to provide the basis for testing whether a set of observations can reasonably be modelled as arising from a specified distribution. Specifically, the probability integral transform is applied to construct an equivalent set of values, and a test is then made of whether a uniform distribution is appropriate for the constructed dataset. Examples of this are P–P plots and Kolmogorov–Smirnov tests.  
 
 ### For sample size n, the margin of error is 3. How many more samples do we need to make the margin of error 0.3? 
-Formula for margin-of-error:
+"Formula for margin-of-error:
 $$
 E = z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
 $$
-To scale $E$ from 3 to 0.3 would require an increase in sample-size by $\sqrt{10}$ 
+To scale $E$ from 3 to 0.3 would require an increase in sample-size by $\sqrt{10}$"
 
 ### What is the assumption of error in linear regression?**  
-- There is not a relationship between the residuals and the  variable; in other words,  is independent of errors. Check this assumption by examining a scatterplot of “residuals versus fits”; the correlation should be approximately 0. In other words, there should not look like there is a relationship.  
-- The residuals must be approximately normally distributed. Check this assumption by examining a normal probability plot; the observations should be near the line. You can also examine a histogram of the residuals; it should be approximately normally distributed.  
+"- There is not a relationship between the residuals and the  variable; in other words,  is independent of errors. Check this assumption by examining a scatterplot of “residuals versus fits”; the correlation should be approximately 0. In other words, there should not look like there is a relationship.  
+- The residuals must be approximately normally distributed. Check this assumption by examining a normal probability plot; the observations should be near the line. You can also examine a histogram of the residuals; it should be approximately normally distributed
  
 ### Given data from two product campaigns, how could you do an A/B test if we see a 3% increase for one product?
-Pick one variable to test, in this case it would be the $3\%$ increase *(clarify what type of increase, or increase in what specific metric)*.  Create a control and a challenger, which changes (two different product campaigns), and split the sample groups equally and randomly. Determine how significant these results have to be, for a smaller increase, we want higher confidence level, since at such a small level of increase, random variance may play a larger part in the test. Our null hypothesis is our intervention (the challenger) having a positive effect (or a negative effect no larger than a margin).  
-Statistical significance is calculated by simulating assignments of both campaigns randomly to conversions for a large number of simulations, and comparing the distribution of these conversions to the actual conversions rate.
+Pick one variable to test, in this case it would be the $3\%$ increase *(clarify what type of increase, or increase in what specific metric)*.  Create a control and a challenger, which changes (two different product campaigns), and split the sample groups equally and randomly. Determine how significant these results have to be, for a smaller increase, we want higher confidence level, since at such a small level of increase, random variance may play a larger part in the test. Our null hypothesis is our intervention (the challenger) having a positive effect (or a negative effect no larger than a margin)Statistical significance is calculated by simulating assignments of both campaigns randomly to conversions for a large number of simulations, and comparing the distribution of these conversions to the actual conversions rate.
 
 ### I have a deck and take one card at random. What is the probability you guess it right?  
 $$
@@ -38,10 +34,10 @@ $$
 Informal method, $2X \in [-2a, 2a]$ and $Y\in[-a, a]$. Probability is $\frac{1}{}$
 
 ### There are four people in an elevator and four floors in a building. What’s the probability that each person gets off on a different floor?  
-This is a basic permutation/counting question:
+"This is a basic permutation/counting question:
 $$
 \frac{\text{Number of ways for 4 people to get off on 4 floors}}{\text{Number of ways each passenger can get off the elevator}} = \frac{5C1\cdot 4C1\cdot 3C1\cdot 2C1 \cdot 1C1}{5\cdot 5\cdot5\cdot5\cdot5}
-$$
+$$"
 
 #### Make an unfair coin fair 
 Mathematician John von Neumann is credited with figuring out how to take a biased coin (whose probability of coming up heads is p, not necessarily equal to 0.5) and “simulate” a fair coin. Simply flip the coin twice. If it comes up heads both times or tails both times, then flip it twice again. Eventually, you’ll get two different flips — either a heads and then a tails, or a tails and then a heads, with each of these two cases equally likely. Once you get two different flips, you can call the second of those flips the outcome of your “simulation.”
